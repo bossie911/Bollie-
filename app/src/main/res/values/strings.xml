@@ -1,9 +1,15 @@
 <resources>
+    //Standard strings
     <string name="app_name">MDP_Bollie</string>
     <string name="title_activity_bottom_nav">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    //Custom strings
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_bestellingen_txt">Aantal open bestellingen</string>
+    <string name="open_retouren_txt">Open retouren</string>
+    <string name="klantvragen_txt">Klantvragen</string>
+    <string name="maand_omzet_txt">Omzet van de maand</string>
+    <string name="voorraad_txt">producten niet meer op voorraad</string>
 </resources>
