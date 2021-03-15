@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusinesHubFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnOmzet2"
+            android:layout_width="348dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="4dp"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/btnVoorraad2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnVoorraad2"
+            android:layout_width="348dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="80dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnRetouren2"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/btnOmzet2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnKlantvragen2"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginBottom="8dp"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/btnOmzet2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.288"
+            app:layout_constraintStart_toEndOf="@+id/btnRetouren2" />
+
+        <Button
+            android:id="@+id/btnBestellingen2"
+            android:layout_width="348dp"
+            android:layout_height="154dp"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/btnRetouren2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.931" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
