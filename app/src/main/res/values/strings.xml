@@ -12,4 +12,6 @@
     <string name="klantvragen_txt">Klantvragen</string>
     <string name="maand_omzet_txt">Omzet van de maand</string>
     <string name="voorraad_txt">producten niet meer op voorraad</string>
+    <string name="business_txt">Business</string>
+    <string name="home_txt">Home</string>
 </resources>
