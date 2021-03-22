@@ -28,4 +28,6 @@
     <string name="following">Following</string>
     <string name="stimulation_button">Start learning!</string>
     <string name="stimulation_text">What would you want to learn today?</string>
+    <string name="mijn_cursussen">Mijn cursussen</string>
+
 </resources>
