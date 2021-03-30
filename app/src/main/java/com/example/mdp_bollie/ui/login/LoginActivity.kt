@@ -1,6 +1,7 @@
 package com.example.mdp_bollie.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -14,6 +15,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import com.example.mdp_bollie.BottomNavActivity
 
 import com.example.mdp_bollie.R
 
@@ -93,6 +95,8 @@ class LoginActivity : AppCompatActivity() {
             login.setOnClickListener {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
+                val intent = Intent(this@LoginActivity, BottomNavActivity::class.java)
+                startActivity(intent)
             }
         }
     }
