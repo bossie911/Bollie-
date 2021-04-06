@@ -55,7 +55,7 @@
             android:layout_height="160dp"
             android:layout_marginStart="32dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/open_retouren_txt"
+            android:text="@string/open_retouren_text"
             app:cornerRadius="@dimen/btn_radius"
             app:layout_constraintBottom_toTopOf="@+id/btnOmzet2"
             app:layout_constraintStart_toStartOf="parent" />
@@ -77,7 +77,7 @@
             android:id="@+id/btnBestellingen2"
             android:layout_width="348dp"
             android:layout_height="154dp"
-            android:text="@string/open_retouren_txt"
+            android:text="@string/open_retouren_text"
             app:cornerRadius="@dimen/btn_radius"
             app:iconTint="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/btnRetouren2"
