@@ -30,5 +30,16 @@
     <string name="stimulation_text">What would you want to learn today?</string>
     <string name="mijn_cursussen">Mijn cursussen</string>
     <string name="nu_lezen">Nu Lezen</string>
+    <string name="profile">Profile</string>
+    <string name="setings">Settings</string>
+    <string name="userName"><![CDATA[<USER>]]></string>
+    <string name="function">Function</string>
+    <string name="cursussen">Cursussen</string>
+    <string name="knop"><![CDATA[>]]></string>
+    <string name="business">Business</string>
+    <string name="comunity">Community</string>
+    <string name="support">Support</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="log_out">Log Out</string>
 
 </resources>

@@ -10,6 +10,8 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.mdp_bollie.BottomNavActivity
+import com.example.mdp_bollie.MainActivity
 import com.example.mdp_bollie.R
 import com.example.mdp_bollie.databinding.FragmentHomeBinding
 import java.text.SimpleDateFormat
