@@ -31,4 +31,22 @@
     <string name="mijn_cursussen">Mijn cursussen</string>
     <string name="nu_lezen">Nu Lezen</string>
 
+<!--    Welcome Page -->
+    <string name="head_title">Welkom bij</string>
+    <string name="head_title_logo">bollie</string>
+    <string name="home_aanmelden_btn">Aanmelden</string>
+<!--    Login & Registration Page -->
+    <string name="login_welcome">Welkom terug!</string>
+    <string name="login_uWelcome">Login met je bollie account!</string>
+    <string name="btn_login">Inloggen</string>
+    <string name="AanmeldenOpLogin">Of meld je gratis aan</string>
+    <string name="wachtwoord_vergeten">Wachtwoord vergeten?</string>
+    <string name="email_hint">E-mail</string>
+    <string name="wachtwoord_hint">Wachtwoord</string>
+    <string name="title_uitleg">De beste plek om te leren hoe je effectief op bol.com kunt verkopen!</string>
+    <string name="aanmelden_welcome">Welkom</string>
+    <string name="aanmelden_uWelcome">Meld je nu gratis aan</string>
+    <string name="of_log_in">Of log in</string>
+<!--    -->
+
 </resources>
