@@ -5,12 +5,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mdp_bollie.R
 import com.example.mdp_bollie.databinding.FragmentCourseHubBinding
+
 
 class CourseHubFragment : Fragment() {
     private var _binding: FragmentCourseHubBinding? = null
@@ -31,15 +37,31 @@ class CourseHubFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initViews()
+        addCourse()
     }
     private fun initViews() {
-       // binding.rvCourses.layoutManager = LinearLayoutManager(RecyclerView.VERTICAL, false)
+        binding.rvCourses.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         binding.rvCourses.adapter = courseAdapter
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun addCourse(){
+        val courseName: String = "Wiskunde"
+        val courseAuther: String = "Jan"
+        val courseName1: String = "Engels"
+        val courseAuther1: String = "Piet"
+        val courseName2: String = "Nederlands"
+        val courseAuther2: String = "Gerard"
+
+        courses.add(Course(courseName, courseAuther))
+        courses.add(Course(courseName1, courseAuther1))
+        courses.add(Course(courseName2, courseAuther2))
+        courseAdapter.notifyDataSetChanged()
+
     }
 
 

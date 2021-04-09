@@ -4,5 +4,5 @@ data class Course(
     //var imageId: String,
     var courseName: String,
     var courseAuthor: String,
-    var progress: Int
+    //var progress: Int
 )
