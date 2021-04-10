@@ -20,48 +20,46 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/roundedwidget" />
 
+
     <TextView
-        android:id="@+id/User"
+        android:id="@+id/Profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="192dp"
+        android:layout_marginTop="20dp"
         android:text="@string/userName"
         android:textColor="#1F0C7A"
         android:textColorHighlight="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/Fuction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:text="@string/function"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/User" />
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Profile" />
 
     <LinearLayout
         android:id="@+id/linearLayoutProfiel"
         android:layout_width="411dp"
         android:layout_height="67dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <Button
             android:id="@+id/buttonProfiel"
@@ -89,10 +87,9 @@
         android:id="@+id/linearLayoutSettings"
         android:layout_width="411dp"
         android:layout_height="67dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutProfiel">
 
@@ -122,10 +119,9 @@
         android:id="@+id/linearLayoutCursussen"
         android:layout_width="411dp"
         android:layout_height="67dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutSettings">
 
@@ -155,11 +151,9 @@
         android:id="@+id/linearLayoutBusiness"
         android:layout_width="411dp"
         android:layout_height="67dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="2dp"
+        android:layout_marginStart="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutCursussen">
 
@@ -189,10 +183,11 @@
         android:id="@+id/linearLayoutComunity"
         android:layout_width="411dp"
         android:layout_height="67dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutBusiness">
 
@@ -222,9 +217,9 @@
         android:id="@+id/linearLayoutSupport"
         android:layout_width="411dp"
         android:layout_height="67dp"
+        android:layout_marginStart="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutComunity">
 
@@ -256,7 +251,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />

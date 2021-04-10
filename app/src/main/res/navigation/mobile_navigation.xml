@@ -25,7 +25,7 @@
         android:id="@+id/navigation_notifications"
         android:name="com.example.mdp_bollie.ui.notifications.SettingsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_user" />
     <fragment
         android:id="@+id/businesHubFragment"
         android:name="com.example.mdp_bollie.BusinesHubFragment"
