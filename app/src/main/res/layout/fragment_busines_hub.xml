@@ -77,7 +77,7 @@
             android:id="@+id/btnBestellingen2"
             android:layout_width="348dp"
             android:layout_height="154dp"
-            android:text="@string/open_retouren_text"
+            android:text="@string/open_bestellingen_txt"
             app:cornerRadius="@dimen/btn_radius"
             app:iconTint="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/btnRetouren2"
