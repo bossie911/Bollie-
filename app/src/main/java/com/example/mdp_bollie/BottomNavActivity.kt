@@ -37,8 +37,6 @@ class BottomNavActivity : AppCompatActivity(){
         val businesHubFragment = BusinesHubFragment()
         val settingsFragment = SettingsFragment()
         val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home, R.id.navigation_courses, R.id.navigation_business, R.id.navigation_profile

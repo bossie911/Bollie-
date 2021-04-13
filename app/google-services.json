@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "236918061281",
+    "firebase_url": "https://mdp-bollie-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mdp-bollie",
+    "storage_bucket": "mdp-bollie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236918061281:android:313b5f5533dea8235b9fa0",
+        "android_client_info": {
+          "package_name": "com.example.mdp_bollie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236918061281-o1uvr6ijf3iegk4k37en1hvtbneve632.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2FrfuIw8ClcRpHgki6_tyo5FJjVDnkj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236918061281-o1uvr6ijf3iegk4k37en1hvtbneve632.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
