@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.mdp_bollie.ui.business.BusinesHubFragment
 import com.example.mdp_bollie.databinding.ActivityBottomNavBinding
 import com.example.mdp_bollie.ui.course.CourseHubFragment
 import com.example.mdp_bollie.ui.home.HomeFragment
