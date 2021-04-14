@@ -33,7 +33,7 @@ class BottomNavActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBottomNavBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding.root)asfdasdfasdfasdfasd
          }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
