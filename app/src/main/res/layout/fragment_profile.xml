@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayoutUserName"
+        android:id="@+id/linearLayoutFirstName"
         android:layout_width="405dp"
         android:layout_height="78dp"
         android:layout_marginStart="20dp"
@@ -48,7 +48,68 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+            android:id="@+id/textInputFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="383dp"
+            android:layout_height="61dp"
+            android:hint="First name"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLastName"
+        android:layout_width="405dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFirstName">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="383dp"
+            android:layout_height="61dp"
+            android:hint="Last name"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutUserName"
+        android:layout_width="405dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutLastName">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputUserName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
@@ -67,6 +128,129 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayoutEmailName"
+        android:layout_width="405dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutUserName">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEmailName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="383dp"
+            android:layout_height="61dp"
+            android:hint="Email"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDateofBirth"
+        android:layout_width="405dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutEmailName">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputDateofBirth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="383dp"
+            android:layout_height="61dp"
+            android:hint="Date of birth"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSex"
+        android:layout_width="405dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutDateofBirth">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputSex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="383dp"
+            android:layout_height="61dp"
+            android:hint="Sex"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFunction"
+        android:layout_width="405dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSex">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputFunction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="383dp"
+            android:layout_height="61dp"
+            android:hint="Function"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
