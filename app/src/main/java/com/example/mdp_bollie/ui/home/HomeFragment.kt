@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
         val navController = findNavController(requireActivity(), R.id.nav_host_fragment)
 
         binding.stimulationBtn.setOnClickListener{
-            navController.navigate(R.id.action_navigation_home_to_businesHubFragment)
+           // navController.navigate(R.id.action_navigation_home_to_businesHubFragment)
 
         }
         for (i in Topic.NAMES.indices){

@@ -11,29 +11,63 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_businesHubFragment"
-            app:destination="@id/businesHubFragment" />
+            android:id="@+id/action_navigation_home_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_course"
+            app:destination="@id/navigation_course" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.mdp_bollie.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_course"
+        android:name="com.example.mdp_bollie.ui.course.CourseHubFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_course_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+        <action
+            android:id="@+id/action_navigation_course_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_course_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_settings"
         android:name="com.example.mdp_bollie.ui.notifications.SettingsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_user" />
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_course"
+            app:destination="@id/navigation_course" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
     <fragment
-        android:id="@+id/businesHubFragment"
-        android:name="com.example.mdp_bollie.BusinesHubFragment"
+        android:id="@+id/navigation_businessHub"
+        android:name="com.example.mdp_bollie.ui.business.BusinesHubFragment"
         android:label="fragment_busines_hub"
         tools:layout="@layout/fragment_busines_hub" >
+
         <action
-            android:id="@+id/action_businesHubFragment_to_navigation_home"
+            android:id="@+id/action_navigation_businessHub_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_businessHub_to_navigation_course"
+            app:destination="@id/navigation_course" />
+        <action
+            android:id="@+id/action_navigation_businessHub_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
