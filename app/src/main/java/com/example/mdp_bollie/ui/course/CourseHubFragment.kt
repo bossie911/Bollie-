@@ -42,11 +42,31 @@ class CourseHubFragment : Fragment() {
     private fun initViews() {
         binding.rvCourses.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         binding.rvCourses.adapter = courseAdapter
+
+        //onclicklisteners voor coursehub buttons
+        binding.btnBezig.setOnClickListener(){
+            removeCourse()
+        }
+        binding.btnLater.setOnClickListener(){
+            removeCourse()
+        }
+        binding.btnPdf.setOnClickListener(){
+            removeCourse()
+        }
+        binding.btnGesc.setOnClickListener(){
+            removeCourse()
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun removeCourse(){
+        courses.clear();
+
+        courseAdapter.notifyDataSetChanged()
     }
 
     private fun addCourse(){
