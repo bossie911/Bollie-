@@ -65,6 +65,8 @@ class CourseHubFragment : Fragment() {
 
     private fun removeCourse(){
         courses.clear();
+
+        courseAdapter.notifyDataSetChanged()
     }
 
     private fun addCourse(){
