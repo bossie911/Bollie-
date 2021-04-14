@@ -61,6 +61,8 @@
     <string name="aanmelden_welcome">Welkom</string>
     <string name="aanmelden_uWelcome">Meld je nu gratis aan</string>
     <string name="of_log_in">Of log in</string>
+    <string name="financien_text">Financiën</string>
+    <string name="financien_txt">Financiën</string>
     <!--    -->
 
 </resources>
