@@ -61,6 +61,13 @@
     <string name="aanmelden_welcome">Welkom</string>
     <string name="aanmelden_uWelcome">Meld je nu gratis aan</string>
     <string name="of_log_in">Of log in</string>
-<!--    -->
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="user_name">User name</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="sex">Sex</string>
+    <string name="function">Function</string>
+    <!--    -->
 
 </resources>

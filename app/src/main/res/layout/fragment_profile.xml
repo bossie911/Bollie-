@@ -61,7 +61,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="383dp"
             android:layout_height="61dp"
-            android:hint="First name"
+            android:hint="@string/first_name"
             tools:layout_editor_absoluteX="-4dp"
             tools:layout_editor_absoluteY="138dp" />
 
@@ -92,7 +92,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="383dp"
             android:layout_height="61dp"
-            android:hint="Last name"
+            android:hint="@string/last_name"
             tools:layout_editor_absoluteX="-4dp"
             tools:layout_editor_absoluteY="138dp" />
 
@@ -122,7 +122,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="383dp"
             android:layout_height="61dp"
-            android:hint="User name"
+            android:hint="@string/user_name"
             tools:layout_editor_absoluteX="-4dp"
             tools:layout_editor_absoluteY="138dp" />
 
@@ -153,7 +153,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="383dp"
             android:layout_height="61dp"
-            android:hint="Email"
+            android:hint="@string/email"
             tools:layout_editor_absoluteX="-4dp"
             tools:layout_editor_absoluteY="138dp" />
 
@@ -184,7 +184,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="383dp"
             android:layout_height="61dp"
-            android:hint="Date of birth"
+            android:hint="@string/date_of_birth"
             tools:layout_editor_absoluteX="-4dp"
             tools:layout_editor_absoluteY="138dp" />
 
@@ -215,7 +215,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="383dp"
             android:layout_height="61dp"
-            android:hint="Sex"
+            android:hint="@string/sex"
             tools:layout_editor_absoluteX="-4dp"
             tools:layout_editor_absoluteY="138dp" />
 
@@ -246,7 +246,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="383dp"
             android:layout_height="61dp"
-            android:hint="Function"
+            android:hint="@string/function"
             tools:layout_editor_absoluteX="-4dp"
             tools:layout_editor_absoluteY="138dp" />
 
