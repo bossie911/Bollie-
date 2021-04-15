@@ -47,6 +47,11 @@
     <string name="aanmelden_welcome">Welkom</string>
     <string name="aanmelden_uWelcome">Meld je nu gratis aan</string>
     <string name="of_log_in">Of log in</string>
+
+    <string name="enter_email">Please enter an email, this is a required field</string>
+    <string name="enter_password">Please enter a password, this is a required field</string>
+    <string name="successful_reg">You have been successfully registered</string>
+
     <!--    -->
 
 </resources>
