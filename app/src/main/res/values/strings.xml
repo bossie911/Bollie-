@@ -51,6 +51,7 @@
     <string name="enter_email">Please enter an email, this is a required field</string>
     <string name="enter_password">Please enter a password, this is a required field</string>
     <string name="successful_reg">You have been successfully registered</string>
+    <string name="successful_login">You are logged in successfully</string>
 
     <!--    -->
 
