@@ -31,6 +31,8 @@ class BusinesHubFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val navController = findNavController()
+
+                //Button navigation
         binding.btnBestellingen2.setOnClickListener {
             navController.navigate(R.id.action_navigation_businessHub_to_businessBestellingenFragment)
         }
