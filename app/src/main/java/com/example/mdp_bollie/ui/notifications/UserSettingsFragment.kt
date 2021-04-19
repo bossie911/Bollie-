@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.mdp_bollie.R
 
-class SettingsFragment : Fragment() {
+class UserSettingsFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,7 +15,7 @@ class SettingsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_user, container, false)
+        val root = inflater.inflate(R.layout.fragment_user_hub, container, false)
         return root
     }
 }

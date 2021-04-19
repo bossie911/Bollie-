@@ -23,12 +23,12 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.mdp_bollie.ui.notifications.SettingsFragment"
+        android:name="com.example.mdp_bollie.ui.notifications.UserSettingsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_user" />
+        tools:layout="@layout/fragment_user_hub" />
     <fragment
         android:id="@+id/businesHubFragment"
-        android:name="com.example.mdp_bollie.BusinesHubFragment"
+        android:name="com.example.mdp_bollie.ui.business.BusinesHubFragment"
         android:label="fragment_busines_hub"
         tools:layout="@layout/fragment_busines_hub" >
         <action
