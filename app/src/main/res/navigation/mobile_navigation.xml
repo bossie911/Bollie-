@@ -15,7 +15,7 @@
             app:destination="@id/navigation_businessHub" />
         <action
             android:id="@+id/action_navigation_home_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
+            app:destination="@id/userHubFragment" />
         <action
             android:id="@+id/action_navigation_home_to_navigation_course"
             app:destination="@id/navigation_course" />
@@ -34,12 +34,12 @@
             app:destination="@id/navigation_home" />
         <action
             android:id="@+id/action_navigation_course_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
+            app:destination="@id/userHubFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_settings"
-        android:name="com.example.mdp_bollie.ui.notifications.UserSettingsFragment"
+        android:id="@+id/userHubFragment"
+        android:name="com.example.mdp_bollie.ui.notifications.UserHubFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_user_hub" >
         <action
@@ -51,6 +51,18 @@
         <action
             android:id="@+id/action_navigation_settings_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_settings_to_userSupportFragment"
+            app:destination="@id/userSupportFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_userProfielFragment"
+            app:destination="@id/userProfielFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_userProfielFragment2"
+            app:destination="@id/userProfielFragment" />
+        <action
+            android:id="@+id/action_userHubFragment_to_userSettingsFragment"
+            app:destination="@id/userSettingsFragment" />
     </fragment>
 
     <fragment
@@ -67,7 +79,7 @@
             app:destination="@id/navigation_course" />
         <action
             android:id="@+id/action_navigation_businessHub_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
+            app:destination="@id/userHubFragment" />
         <action
             android:id="@+id/action_navigation_businessHub_to_businessBestellingenFragment"
             app:destination="@id/businessBestellingenFragment" />
@@ -144,5 +156,32 @@
         <action
             android:id="@+id/action_businessFinancienFragment_to_navigation_businessHub"
             app:destination="@id/navigation_businessHub" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSupportFragment"
+        android:name="com.example.mdp_bollie.ui.notifications.UserSupportFragment"
+        android:label="UserSupportFragment"
+        tools:layout="@layout/fragment_user_support">
+        <action
+            android:id="@+id/action_userSupportFragment_to_navigation_settings"
+            app:destination="@id/userHubFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfielFragment"
+        android:name="com.example.mdp_bollie.ui.notifications.UserProfielFragment"
+        android:label="UserProfielFragment"
+        tools:layout="@layout/fragment_user_profile">
+        <action
+            android:id="@+id/action_userProfielFragment_to_navigation_settings"
+            app:destination="@id/userHubFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSettingsFragment"
+        android:name="com.example.mdp_bollie.ui.notifications.UserSettingsFragment"
+        android:label="UserSettingsFragment"
+        tools:layout="@layout/fragment_user_settings">
+        <action
+            android:id="@+id/action_userSettingsFragment_to_userHubFragment"
+            app:destination="@id/userHubFragment" />
     </fragment>
 </navigation>

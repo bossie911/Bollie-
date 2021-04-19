@@ -6,17 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.mdp_bollie.databinding.FragmentUserProfileBinding
-import com.example.mdp_bollie.databinding.FragmentUserSettingsBinding
+import com.example.mdp_bollie.databinding.FragmentUserSupportBinding
 
-class UserSettingsFragment: Fragment() {
-    private var _binding: FragmentUserSettingsBinding? = null
+class UserSupportFragment: Fragment() {
+    private var _binding: FragmentUserSupportBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentUserSettingsBinding.inflate(inflater, container, false)
+        _binding = FragmentUserSupportBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
