@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/welcomeFragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -11,28 +11,138 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_businesHubFragment"
-            app:destination="@id/businesHubFragment" />
+            android:id="@+id/action_navigation_home_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_course"
+            app:destination="@id/navigation_course" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.mdp_bollie.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_course"
+        android:name="com.example.mdp_bollie.ui.course.CourseHubFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_course_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+        <action
+            android:id="@+id/action_navigation_course_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_course_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.mdp_bollie.ui.notifications.UserSettingsFragment"
+        android:id="@+id/navigation_settings"
+        android:name="com.example.mdp_bollie.ui.notifications.SettingsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_user_hub" />
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_course"
+            app:destination="@id/navigation_course" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
     <fragment
-        android:id="@+id/businesHubFragment"
+        android:id="@+id/navigation_businessHub"
         android:name="com.example.mdp_bollie.ui.business.BusinesHubFragment"
         android:label="fragment_busines_hub"
         tools:layout="@layout/fragment_busines_hub" >
+
         <action
-            android:id="@+id/action_businesHubFragment_to_navigation_home"
+            android:id="@+id/action_navigation_businessHub_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_businessHub_to_navigation_course"
+            app:destination="@id/navigation_course" />
+        <action
+            android:id="@+id/action_navigation_businessHub_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_businessHub_to_businessBestellingenFragment"
+            app:destination="@id/businessBestellingenFragment" />
+        <action
+            android:id="@+id/action_navigation_businessHub_to_businessKlantvragenFragment"
+            app:destination="@id/businessKlantvragenFragment" />
+        <action
+            android:id="@+id/action_navigation_businessHub_to_businessProductsFragment"
+            app:destination="@id/businessProductsFragment" />
+        <action
+            android:id="@+id/action_navigation_businessHub_to_businessFinancienFragment"
+            app:destination="@id/businessFinancienFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.mdp_bollie.ui.login.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mdp_bollie.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.mdp_bollie.ui.login.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/businessBestellingenFragment"
+        android:name="com.example.mdp_bollie.ui.business.BusinessBestellingenFragment"
+        android:label="BusinessBestellingenFragment"
+        tools:layout="@layout/fragment_business_bestellingen" >
+        <action
+            android:id="@+id/action_businessBestellingenFragment_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessKlantvragenFragment"
+        android:name="com.example.mdp_bollie.ui.business.BusinessKlantvragenFragment"
+        android:label="BusinessKlantvragenFragment"
+        tools:layout="@layout/fragment_business_klantvragen"
+        >
+        <action
+            android:id="@+id/action_businessKlantvragenFragment_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessProductsFragment"
+        android:name="com.example.mdp_bollie.ui.business.BusinessProductsFragment"
+        android:label="BusinessProductsFragment"
+        tools:layout="@layout/fragment_business_products"
+        >
+        <action
+            android:id="@+id/action_businessProductsFragment_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessFinancienFragment"
+        android:name="com.example.mdp_bollie.ui.business.BusinessFinancienFragment"
+        android:label="fragment_business_financien"
+        tools:layout="@layout/fragment_business_financien" >
+        <action
+            android:id="@+id/action_businessFinancienFragment_to_navigation_businessHub"
+            app:destination="@id/navigation_businessHub" />
     </fragment>
 </navigation>
