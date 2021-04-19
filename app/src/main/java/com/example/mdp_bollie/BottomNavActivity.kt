@@ -18,7 +18,7 @@ import com.example.mdp_bollie.ui.business.BusinesHubFragment
 import com.example.mdp_bollie.databinding.ActivityBottomNavBinding
 import com.example.mdp_bollie.ui.course.CourseHubFragment
 import com.example.mdp_bollie.ui.home.HomeFragment
-import com.example.mdp_bollie.ui.notifications.SettingsFragment
+import com.example.mdp_bollie.ui.notifications.UserSettingsFragment
 
 class BottomNavActivity : AppCompatActivity(){
 

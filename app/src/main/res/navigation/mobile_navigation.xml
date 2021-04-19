@@ -39,9 +39,9 @@
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.example.mdp_bollie.ui.notifications.SettingsFragment"
+        android:name="com.example.mdp_bollie.ui.notifications.UserSettingsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_user" >
+        tools:layout="@layout/fragment_user_hub" >
         <action
             android:id="@+id/action_navigation_settings_to_navigation_course"
             app:destination="@id/navigation_course" />
