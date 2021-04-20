@@ -30,7 +30,7 @@ class CourseHubFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initViews()
-        addCourse()
+        addStartCourse()
     }
     private fun initViews() {
         binding.rvCourses.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
@@ -39,15 +39,19 @@ class CourseHubFragment : Fragment() {
         //onclicklisteners voor coursehub buttons
         binding.btnBezig.setOnClickListener(){
             removeCourse()
+            bezigCourse()
         }
         binding.btnLater.setOnClickListener(){
             removeCourse()
+            laterCourse()
         }
         binding.btnPdf.setOnClickListener(){
             removeCourse()
+            pdfCourse()
         }
         binding.btnGesc.setOnClickListener(){
             removeCourse()
+            gescCourse()
         }
     }
 
@@ -57,12 +61,33 @@ class CourseHubFragment : Fragment() {
     }
 
     private fun removeCourse(){
-        courses.clear();
-
+        courses.clear()
         courseAdapter.notifyDataSetChanged()
     }
 
-    private fun addCourse(){
+    private fun bezigCourse(){
+        courseAdapter.notifyDataSetChanged()
+        addCourse("koe melken", "jaap de boer")
+    }
+
+    private fun laterCourse(){
+        courseAdapter.notifyDataSetChanged()
+    }
+
+    private fun pdfCourse(){
+        courseAdapter.notifyDataSetChanged()
+    }
+
+    private fun gescCourse(){
+        courseAdapter.notifyDataSetChanged()
+    }
+
+    private fun addCourse(courseName: String, courseAuther: String){
+        courses.add(Course(courseName, courseAuther))
+        courseAdapter.notifyDataSetChanged()
+    }
+
+    private fun addStartCourse(){
         val courseName: String = "Wiskunde"
         val courseAuther: String = "Jan"
         val courseName1: String = "Engels"

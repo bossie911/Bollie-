@@ -45,11 +45,11 @@
     <string name="bestellingen_txt">Bestellingen</string>
     <string name="hoofdstuk1">Hoofdstuk 1</string>
 
-    <!--    Welcome Page -->
+<!--    Welcome Page -->
     <string name="head_title">Welkom bij</string>
     <string name="head_title_logo">bollie</string>
     <string name="home_aanmelden_btn">Aanmelden</string>
-    <!--    Login & Registration Page -->
+<!--    Login & Registration Page -->
     <string name="login_welcome">Welkom terug!</string>
     <string name="login_uWelcome">Login met je bollie account!</string>
     <string name="btn_login">Inloggen</string>
@@ -61,6 +61,24 @@
     <string name="aanmelden_welcome">Welkom</string>
     <string name="aanmelden_uWelcome">Meld je nu gratis aan</string>
     <string name="of_log_in">Of log in</string>
+
+    <string name="enter_email">Please enter an email, this is a required field</string>
+    <string name="enter_password">Please enter a password, this is a required field</string>
+    <string name="successful_reg">You have been successfully registered</string>
+    <string name="successful_login">You are logged in successfully</string>
+
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="user_name">User name</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="sex">Sex</string>
+    <string name="settings">Settings</string>
+    <string name="change_password">Change password</string>
+    <string name="push_notification">Push notification</string>
+    <string name="darkmode">Darkmode</string>
+    <string name="app_info">App info</string>
+    <string name="financien_txt">Financiën</string>
     <!--    -->
 
 </resources>
