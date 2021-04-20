@@ -31,10 +31,19 @@ class UserHubFragment : Fragment() {
         binding.buttonProfiel.setOnClickListener {
             navController.navigate(R.id.action_navigation_settings_to_userProfielFragment)
         }
+        binding.buttonProfiel2.setOnClickListener {
+            navController.navigate(R.id.action_navigation_settings_to_userProfielFragment)
+        }
         binding.buttonSettings.setOnClickListener {
             navController.navigate(R.id.action_userHubFragment_to_userSettingsFragment)
         }
+        binding.buttonSettings2.setOnClickListener {
+            navController.navigate(R.id.action_userHubFragment_to_userSettingsFragment)
+        }
         binding.buttonSupport.setOnClickListener {
+            navController.navigate(R.id.action_navigation_settings_to_userSupportFragment)
+        }
+        binding.buttonSupport2.setOnClickListener {
             navController.navigate(R.id.action_navigation_settings_to_userSupportFragment)
         }
     }
