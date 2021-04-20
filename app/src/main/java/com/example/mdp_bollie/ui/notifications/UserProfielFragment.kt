@@ -1,22 +1,22 @@
-package com.example.mdp_bollie.ui.business
+package com.example.mdp_bollie.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.mdp_bollie.databinding.FragmentBusinesHubBinding
 import com.example.mdp_bollie.databinding.FragmentBusinessBestellingenBinding
+import com.example.mdp_bollie.databinding.FragmentUserProfileBinding
 
-class BusinessBestellingenFragment : Fragment() {
-    private var _binding: FragmentBusinessBestellingenBinding? = null
+class UserProfielFragment: Fragment() {
+    private var _binding: FragmentUserProfileBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentBusinessBestellingenBinding.inflate(inflater, container, false)
+        _binding = FragmentUserProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
