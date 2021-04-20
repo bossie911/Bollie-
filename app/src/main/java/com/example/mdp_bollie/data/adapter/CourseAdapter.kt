@@ -1,4 +1,4 @@
-package com.example.mdp_bollie.ui.course
+package com.example.mdp_bollie.data.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import com.example.mdp_bollie.R
 import com.example.mdp_bollie.data.model.Course
 import com.example.mdp_bollie.databinding.ItemCourseBinding
 
-class CourseAdaptor(private val courses: List<Course>) : RecyclerView.Adapter<CourseAdaptor.ViewHolder>() {
+class CourseAdapter(private val courses: List<Course>) : RecyclerView.Adapter<CourseAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

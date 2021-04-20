@@ -9,9 +9,12 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.debug
+import org.jetbrains.anko.info
 import java.lang.Exception
 
-class CoursesViewModel: ViewModel() {
+class CoursesViewModel: ViewModel(), AnkoLogger {
 
     private val dbCourses = FirebaseDatabase.getInstance().getReference(NODE_COURSES)
 
@@ -20,12 +23,13 @@ class CoursesViewModel: ViewModel() {
         get() = _courses
 
     fun fetchCourses(){
-        dbCourses.addListenerForSingleValueEvent(object: ValueEventListener{
+        dbCourses.addValueEventListener(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
                     val courses = mutableListOf<Course>()
                     for(coursesSnapshot in snapshot.children){
                         val course = coursesSnapshot.getValue(Course::class.java)
+                        info(course?.courseName)
                         course?.id = coursesSnapshot.key
                         course?.let {courses.add(it)}
                     }

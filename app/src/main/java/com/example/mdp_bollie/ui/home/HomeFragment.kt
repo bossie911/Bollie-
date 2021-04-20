@@ -1,19 +1,17 @@
 package com.example.mdp_bollie.ui.home
 
-import android.icu.util.Calendar
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation.findNavController
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.mdp_bollie.BottomNavActivity
-import com.example.mdp_bollie.MainActivity
 import com.example.mdp_bollie.R
+import com.example.mdp_bollie.data.adapter.TopicAdapter
 import com.example.mdp_bollie.data.model.Course
 import com.example.mdp_bollie.databinding.FragmentHomeBinding
 import com.example.mdp_bollie.ui.CoursesViewModel
@@ -26,20 +24,11 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val courses = arrayListOf<Course>()
-    private val courseAdapter = CourseAdapter(courses)
+    private val courseAdapter = TopicAdapter(courses)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.fetchCourses()
-
-        viewModel.courses.observe(viewLifecycleOwner, Observer { newCourses ->
-            courses.addAll(newCourses!)
-
-        }
-
-        )
-        courseAdapter.notifyDataSetChanged()
         arguments?.let {
         }
 
@@ -52,6 +41,14 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(CoursesViewModel::class.java)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val navController = findNavController(requireActivity(), R.id.nav_host_fragment)
+
+        viewModel.fetchCourses()
+
+        viewModel.courses.observe(viewLifecycleOwner, Observer { newCourses ->
+            courses.addAll(newCourses)
+            courseAdapter.notifyDataSetChanged()
+        })
+
 
         binding.stimulationBtn.setOnClickListener{
            navController.navigate(R.id.action_navigation_home_to_navigation_course)
