@@ -7,17 +7,17 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_courses"
+        android:id="@+id/navigation_course"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/title_notifications" />
 
     <item
-        android:id="@+id/navigation_business"
+        android:id="@+id/navigation_businessHub"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_dashboard" />
 
     <item
-        android:id="@+id/navigation_profile"
+        android:id="@+id/userHubFragment"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_dashboard" />
 

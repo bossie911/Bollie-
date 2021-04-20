@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2BDDC6">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/roundedwidget" />
+
+
+    <TextView
+        android:id="@+id/Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/settings"
+        android:textColor="#1F0C7A"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPassword"
+        android:layout_width="411dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView">
+
+        <Button
+            android:id="@+id/buttonPassword"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="364dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/change_password"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#1F0C7A" />
+
+        <Button
+            android:id="@+id/buttonPassword2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/knop" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNotification"
+        android:layout_width="395dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPassword">
+
+        <Button
+            android:id="@+id/buttonPushnotification"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/push_notification"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#1F0C7A" />
+
+        <Switch
+            android:id="@+id/switchPushNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDarkmode"
+        android:layout_width="395dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutNotification">
+
+        <Button
+            android:id="@+id/buttonDarkmode"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/darkmode"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#1F0C7A" />
+
+        <Switch
+            android:id="@+id/SwitchDarkmode"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAppInfo"
+        android:layout_width="411dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutDarkmode">
+
+        <Button
+            android:id="@+id/buttonAppInfo"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="364dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_info"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#1F0C7A" />
+
+        <Button
+            android:id="@+id/buttonAppInfo2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/knop" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
