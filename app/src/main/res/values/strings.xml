@@ -8,7 +8,7 @@
     //Custom strings
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open_bestellingen_txt">Aantal open bestellingen</string>
-    <string name="open_retouren_txt">Open retouren</string>
+    <string name="open_retouren_text">Open retouren</string>
     <string name="klantvragen_txt">Klantvragen</string>
     <string name="maand_omzet_txt">Omzet van de maand</string>
     <string name="voorraad_txt">producten niet meer op voorraad</string>
@@ -30,12 +30,26 @@
     <string name="stimulation_text">What would you want to learn today?</string>
     <string name="mijn_cursussen">Mijn cursussen</string>
     <string name="nu_lezen">Nu Lezen</string>
+    <string name="profile">Profile</string>
+    <string name="setings">Settings</string>
+    <string name="userName"><![CDATA[<USER>]]></string>
+    <string name="function">Function</string>
+    <string name="cursussen">Cursussen</string>
+    <string name="knop"><![CDATA[>]]></string>
+    <string name="business">Business</string>
+    <string name="comunity">Community</string>
+    <string name="support">Support</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="log_out">Log Out</string>
+    <string name="producten_txt">Producten</string>
+    <string name="bestellingen_txt">Bestellingen</string>
+    <string name="hoofdstuk1">Hoofdstuk 1</string>
 
-    <!--    Welcome Page -->
+<!--    Welcome Page -->
     <string name="head_title">Welkom bij</string>
     <string name="head_title_logo">bollie</string>
     <string name="home_aanmelden_btn">Aanmelden</string>
-    <!--    Login & Registration Page -->
+<!--    Login & Registration Page -->
     <string name="login_welcome">Welkom terug!</string>
     <string name="login_uWelcome">Login met je bollie account!</string>
     <string name="btn_login">Inloggen</string>
@@ -53,6 +67,18 @@
     <string name="successful_reg">You have been successfully registered</string>
     <string name="successful_login">You are logged in successfully</string>
 
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="user_name">User name</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="sex">Sex</string>
+    <string name="settings">Settings</string>
+    <string name="change_password">Change password</string>
+    <string name="push_notification">Push notification</string>
+    <string name="darkmode">Darkmode</string>
+    <string name="app_info">App info</string>
+    <string name="financien_txt">Financiën</string>
     <!--    -->
 
 </resources>

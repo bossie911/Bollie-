@@ -10,6 +10,8 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.mdp_bollie.BottomNavActivity
+import com.example.mdp_bollie.MainActivity
 import com.example.mdp_bollie.R
 import com.example.mdp_bollie.databinding.FragmentHomeBinding
 import java.text.SimpleDateFormat
@@ -35,7 +37,7 @@ class HomeFragment : Fragment() {
         val navController = findNavController(requireActivity(), R.id.nav_host_fragment)
 
         binding.stimulationBtn.setOnClickListener{
-            navController.navigate(R.id.action_navigation_home_to_businesHubFragment)
+           // navController.navigate(R.id.action_navigation_home_to_businesHubFragment)
 
         }
         for (i in Topic.NAMES.indices){
