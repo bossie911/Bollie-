@@ -1,34 +1,34 @@
 package com.example.mdp_bollie.ui.course
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResult
-import androidx.fragment.app.setFragmentResultListener
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mdp_bollie.R
+import com.example.mdp_bollie.data.adapter.CourseAdapter
+import com.example.mdp_bollie.data.model.Course
 import com.example.mdp_bollie.databinding.FragmentCourseHubBinding
+import com.example.mdp_bollie.ui.CoursesViewModel
 
 
 class CourseHubFragment : Fragment() {
+    private lateinit var viewModel: CoursesViewModel
     private var _binding: FragmentCourseHubBinding? = null
     private val binding get() = _binding!!
 
     private val courses = arrayListOf<Course>()
-    private val courseAdapter = CourseAdaptor(courses)
+    private val courseAdapter = CourseAdapter(courses)
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        viewModel = ViewModelProvider(this).get(CoursesViewModel::class.java)
+        loadCourses()
         _binding = FragmentCourseHubBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -37,7 +37,7 @@ class CourseHubFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initViews()
-        addStartCourse()
+        //addStartCourse()
     }
     private fun initViews() {
         binding.rvCourses.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
@@ -89,8 +89,17 @@ class CourseHubFragment : Fragment() {
         courseAdapter.notifyDataSetChanged()
     }
 
-    private fun addCourse(courseName: String, courseAuther: String){
-        courses.add(Course(courseName, courseAuther))
+    private fun loadCourses(){
+        viewModel.fetchCourses()
+
+        viewModel.courses.observe(viewLifecycleOwner, Observer { newCourses ->
+            courses.addAll(newCourses)
+            courseAdapter.notifyDataSetChanged()
+        })
+    }
+
+    private fun addCourse(courseName: String, courseAuthor: String){
+        courses.add(Course(courseName, courseAuthor))
         courseAdapter.notifyDataSetChanged()
     }
 

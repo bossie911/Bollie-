@@ -7,22 +7,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.mdp_bollie.R
+import com.example.mdp_bollie.databinding.FragmentHomeBinding
+import com.example.mdp_bollie.databinding.FragmentRegistrationBinding
 import com.google.firebase.auth.FirebaseAuth
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.info
 
 
-class RegistrationFragment : Fragment() {
+class RegistrationFragment : Fragment(), AnkoLogger {
 
     private lateinit var auth: FirebaseAuth
+    private var _binding: FragmentRegistrationBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registration, container, false)
+        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,35 +52,35 @@ class RegistrationFragment : Fragment() {
         //Check on user input
         when {
             //check if email field is empty
-            TextUtils.isEmpty(R.id.reg_email.toString().trim {
+            TextUtils.isEmpty(binding.regEmail.text.toString().trim {
                 it <= ' '
             }) -> {
-                Toast.makeText(RegistrationFragment().context, getString(R.string.enter_email), Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.enter_email), Toast.LENGTH_LONG).show()
             }
             //check if password field is empty
-            TextUtils.isEmpty(R.id.reg_password.toString().trim {
+            TextUtils.isEmpty(binding.regPassword.text.toString().trim {
                 it <= ' '
             }) -> {
-                Toast.makeText(RegistrationFragment().context, getString(R.string.enter_password), Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.enter_password), Toast.LENGTH_LONG).show()
             }
             //Get rid of spaces in user input
             else -> {
-                val email: String = R.id.reg_email.toString().trim {
+                val email: String = binding.regEmail.text.toString().trim {
                     it <= ' '
                 }
-                val password: String = R.id.reg_password.toString().trim {
+                val password: String = binding.regPassword.text.toString().trim {
                     it <= ' '
                 }
                 //Create a user with success Sign in
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(RegistrationFragment().context, getString(R.string.successful_reg), Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), getString(R.string.successful_reg), Toast.LENGTH_LONG).show()
                         findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
                     }
                     //if task was not successful, print error message
                     else {
-                        Toast.makeText(RegistrationFragment().context, (task.exception?.message), Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), (task.exception?.message), Toast.LENGTH_LONG).show()
                     }
                 }
             }
