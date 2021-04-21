@@ -7,18 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.mdp_bollie.R
-import com.example.mdp_bollie.databinding.FragmentHomeBinding
 import com.example.mdp_bollie.databinding.FragmentRegistrationBinding
 import com.google.firebase.auth.FirebaseAuth
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.info
 
-
-class RegistrationFragment : Fragment(), AnkoLogger {
+class RegistrationFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
     private var _binding: FragmentRegistrationBinding? = null
