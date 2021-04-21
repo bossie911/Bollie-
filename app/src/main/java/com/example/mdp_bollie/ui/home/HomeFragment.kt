@@ -26,36 +26,33 @@ class HomeFragment : Fragment() {
     private val courses = arrayListOf<Course>()
     private val courseAdapter = TopicAdapter(courses)
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
-
     }
 
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
+
         viewModel = ViewModelProvider(this).get(CoursesViewModel::class.java)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val navController = findNavController(requireActivity(), R.id.nav_host_fragment)
 
         viewModel.fetchCourses()
-
         viewModel.courses.observe(viewLifecycleOwner, Observer { newCourses ->
             courses.addAll(newCourses)
             courseAdapter.notifyDataSetChanged()
         })
 
-
-        binding.stimulationBtn.setOnClickListener{
-           navController.navigate(R.id.action_navigation_home_to_navigation_course)
-
+        binding.stimulationBtn.setOnClickListener {
+            navController.navigate(R.id.action_navigation_home_to_navigation_course)
         }
+
         initViews()
-        // Inflate the layout for this fragment
+
         return binding.root
     }
 
@@ -63,10 +60,9 @@ class HomeFragment : Fragment() {
         val name = "Niels"
         val date = SimpleDateFormat("d MMM", Locale.getDefault()).format(Date())
         binding.tvGreeting.text = getString(R.string.greeting, name)
-        binding.tvDate.text = getString(R.string.date,  date)
+        binding.tvDate.text = getString(R.string.date, date)
         binding.rvTopicsFollowing.layoutManager = StaggeredGridLayoutManager(1, RecyclerView.HORIZONTAL)
         binding.rvTopicsFollowing.adapter = courseAdapter
 //        createItemTouchHelper().attachToRecyclerView(binding.rvQuestions)
     }
-
 }

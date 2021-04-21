@@ -47,13 +47,13 @@ class RegistrationFragment : Fragment() {
             TextUtils.isEmpty(R.id.reg_email.toString().trim {
                 it <= ' '
             }) -> {
-                Toast.makeText(RegistrationFragment().context, getString(R.string.enter_email), Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.enter_email), Toast.LENGTH_LONG).show()
             }
             //check if password field is empty
             TextUtils.isEmpty(R.id.reg_password.toString().trim {
                 it <= ' '
             }) -> {
-                Toast.makeText(RegistrationFragment().context, getString(R.string.enter_password), Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.enter_password), Toast.LENGTH_LONG).show()
             }
             //Get rid of spaces in user input
             else -> {
@@ -67,12 +67,12 @@ class RegistrationFragment : Fragment() {
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(RegistrationFragment().context, getString(R.string.successful_reg), Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), getString(R.string.successful_reg), Toast.LENGTH_LONG).show()
                         findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
                     }
                     //if task was not successful, print error message
                     else {
-                        Toast.makeText(RegistrationFragment().context, (task.exception?.message), Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), (task.exception?.message), Toast.LENGTH_LONG).show()
                     }
                 }
             }
