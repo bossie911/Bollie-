@@ -45,11 +45,11 @@
     <string name="bestellingen_txt">Bestellingen</string>
     <string name="hoofdstuk1">Hoofdstuk 1</string>
 
-<!--    Welcome Page -->
+    <!--    Welcome Page -->
     <string name="head_title">Welkom bij</string>
     <string name="head_title_logo">bollie</string>
     <string name="home_aanmelden_btn">Aanmelden</string>
-<!--    Login & Registration Page -->
+    <!--    Login & Registration Page -->
     <string name="login_welcome">Welkom terug!</string>
     <string name="login_uWelcome">Login met je bollie account!</string>
     <string name="btn_login">Inloggen</string>
@@ -79,6 +79,9 @@
     <string name="darkmode">Darkmode</string>
     <string name="app_info">App info</string>
     <string name="financien_txt">Financiën</string>
+    <string name="factuurDl_txt">Download Factuur</string>
+    <string name="pakbonDl_txt">Download Pakbon</string>
+    <string name="Retour_txt">Bahendel Retour</string>
     <!--    -->
 
 </resources>
