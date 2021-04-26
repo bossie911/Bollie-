@@ -17,7 +17,7 @@ class CourseAdapter(private val courses: List<Course>) : RecyclerView.Adapter<Co
         fun databind(course: Course) {
             //binding.ivImage.setImageResource(R.drawable.)
             binding.tvCourseName.text = course.courseName
-            binding.tvCourseAuthor.text = course.courseAuthor
+            //binding.tvCourseAuthor.text = course.courseAuthor
         }
     }
 
