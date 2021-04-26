@@ -39,6 +39,7 @@ class CourseHubFragment : Fragment() {
         initViews()
         addStartCourse()
     }
+
     private fun initViews() {
         binding.rvCourses.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         binding.rvCourses.adapter = courseAdapter

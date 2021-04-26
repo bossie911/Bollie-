@@ -3,6 +3,8 @@ package com.example.mdp_bollie.ui.course
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mdp_bollie.R
 import com.example.mdp_bollie.databinding.ItemCourseBinding
@@ -13,10 +15,12 @@ class CourseAdaptor(private val courses: List<Course>) : RecyclerView.Adapter<Co
 
         val binding = ItemCourseBinding.bind(itemView)
 
+
         fun databind(course: Course) {
             //binding.ivImage.setImageResource(R.drawable.)
             binding.tvCourseName.text = course.courseName
             binding.tvCourseAuthor.text = course.courseAuthor
+
 
         }
     }
@@ -32,6 +36,9 @@ class CourseAdaptor(private val courses: List<Course>) : RecyclerView.Adapter<Co
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.databind(courses[position])
+        val item = courses[position]
+        holder.databind(item)
     }
 }
+
+

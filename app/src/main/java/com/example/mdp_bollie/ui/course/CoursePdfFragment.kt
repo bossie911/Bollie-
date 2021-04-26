@@ -1,13 +1,14 @@
 package com.example.mdp_bollie.ui.course
 
+import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.mdp_bollie.databinding.FragmentCoursePdfBinding
+import com.github.barteksc.pdfviewer.PDFView
+
 
 class CoursePdfFragment : Fragment() {
     private var _binding: FragmentCoursePdfBinding? = null
@@ -26,12 +27,12 @@ class CoursePdfFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initViews()
-
+        val pdfView = binding.pdfView
+        pdfView.fromAsset("test.pdf").load()
     }
-    private fun initViews() {
 
-    }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
