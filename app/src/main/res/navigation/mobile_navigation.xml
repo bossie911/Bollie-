@@ -25,7 +25,7 @@
         android:id="@+id/navigation_course"
         android:name="com.example.mdp_bollie.ui.course.CourseHubFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" >
+        tools:layout="@layout/fragment_course_hub" >
         <action
             android:id="@+id/action_navigation_course_to_navigation_businessHub"
             app:destination="@id/navigation_businessHub" />
@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_navigation_course_to_navigation_settings"
             app:destination="@id/userHubFragment" />
+        <action
+            android:id="@+id/action_navigation_course_to_coursePdfFragment"
+            app:destination="@id/coursePdfFragment" />
     </fragment>
 
     <fragment
@@ -191,5 +194,19 @@
         <action
             android:id="@+id/action_userSettingsFragment_to_userHubFragment"
             app:destination="@id/userHubFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coursePdfFragment"
+        android:name="com.example.mdp_bollie.ui.course.CoursePdfFragment"
+        android:label="CoursePdfFragment"
+        tools:layout="@layout/fragment_course_pdf"/>
+    <fragment
+        android:id="@+id/courseItem2"
+        android:name="com.example.mdp_bollie.ui.course.CourseItem"
+        android:label="CourseItem"
+        tools:layout="@layout/item_course">
+        <action
+            android:id="@+id/action_courseItem2_to_coursePdfFragment"
+            app:destination="@id/coursePdfFragment" />
     </fragment>
 </navigation>

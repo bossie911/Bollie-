@@ -34,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    task prepareKotlinBuildScriptModel {
+    }
 }
 
 dependencies {
@@ -53,6 +56,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:3.0.0-beta.5'
 
     implementation 'com.google.firebase:firebase-database:19.7.0'
     implementation 'com.google.firebase:firebase-auth:20.0.4'

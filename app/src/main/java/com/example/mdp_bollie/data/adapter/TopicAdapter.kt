@@ -15,7 +15,7 @@ class TopicAdapter(private val topics: List<Course>) : RecyclerView.Adapter<Topi
         fun databind(course: Course) {
             //binding.ivImage.setImageResource(R.drawable.)
             binding.nametv.text = course.courseName
-            binding.authortv.text = course.courseAuthor
+            //binding.authortv.text = course.courseAuthor
         }
     }
 
