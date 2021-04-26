@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mdp_bollie.R
 import com.example.mdp_bollie.data.adapter.CourseAdapter
 import com.example.mdp_bollie.data.model.Course
 import com.example.mdp_bollie.databinding.FragmentCourseHubBinding
@@ -21,12 +23,18 @@ class CourseHubFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val courses = arrayListOf<Course>()
+
     private val courseAdapter = CourseAdapter(courses)
+
+
+
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        val navController = findNavController()
+        courseAdapter.setNavController(navController)
         viewModel = ViewModelProvider(this).get(CoursesViewModel::class.java)
         loadCourses()
         _binding = FragmentCourseHubBinding.inflate(inflater, container, false)
