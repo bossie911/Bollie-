@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mdp_bollie.R
 import com.example.mdp_bollie.data.adapter.CourseAdapter
 import com.example.mdp_bollie.data.model.Course
 import com.example.mdp_bollie.databinding.FragmentCourseHubBinding

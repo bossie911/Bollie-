@@ -1,18 +1,13 @@
 package com.example.mdp_bollie.data.adapter
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mdp_bollie.R
 import com.example.mdp_bollie.data.model.Course
 import com.example.mdp_bollie.databinding.ItemCourseBinding
-import com.example.mdp_bollie.ui.course.CourseHubFragment
 
 class CourseAdapter(private val courses: List<Course>) : RecyclerView.Adapter<CourseAdapter.ViewHolder>() {
 
