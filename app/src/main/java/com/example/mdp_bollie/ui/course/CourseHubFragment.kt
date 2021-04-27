@@ -108,7 +108,7 @@ class CourseHubFragment : Fragment() {
     }
 
     private fun addCourse(courseName: String, courseAuthor: String){
-        courses.add(Course(courseName, courseAuthor))
+        courses.add(Course(courseName))
         courseAdapter.notifyDataSetChanged()
     }
 
@@ -120,9 +120,9 @@ class CourseHubFragment : Fragment() {
         val courseName2: String = "Nederlands"
         val courseAuther2: String = "Gerard"
 
-        courses.add(Course(courseName, courseAuther))
-        courses.add(Course(courseName1, courseAuther1))
-        courses.add(Course(courseName2, courseAuther2))
+        courses.add(Course(courseName))
+        courses.add(Course(courseName1))
+        courses.add(Course(courseName2))
         courseAdapter.notifyDataSetChanged()
 
     }
