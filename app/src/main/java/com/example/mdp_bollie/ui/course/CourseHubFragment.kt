@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mdp_bollie.R
 import com.example.mdp_bollie.data.adapter.CourseAdapter
 import com.example.mdp_bollie.data.model.Course
 import com.example.mdp_bollie.databinding.FragmentCourseHubBinding
@@ -21,12 +23,18 @@ class CourseHubFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val courses = arrayListOf<Course>()
+
     private val courseAdapter = CourseAdapter(courses)
+
+
+
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        val navController = findNavController()
+        courseAdapter.setNavController(navController)
         viewModel = ViewModelProvider(this).get(CoursesViewModel::class.java)
         loadCourses()
         _binding = FragmentCourseHubBinding.inflate(inflater, container, false)
@@ -39,6 +47,7 @@ class CourseHubFragment : Fragment() {
         initViews()
         //addStartCourse()
     }
+
     private fun initViews() {
         binding.rvCourses.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         binding.rvCourses.adapter = courseAdapter
@@ -99,7 +108,7 @@ class CourseHubFragment : Fragment() {
     }
 
     private fun addCourse(courseName: String, courseAuthor: String){
-        courses.add(Course(courseName, courseAuthor))
+        courses.add(Course(courseName))
         courseAdapter.notifyDataSetChanged()
     }
 
@@ -111,9 +120,9 @@ class CourseHubFragment : Fragment() {
         val courseName2: String = "Nederlands"
         val courseAuther2: String = "Gerard"
 
-        courses.add(Course(courseName, courseAuther))
-        courses.add(Course(courseName1, courseAuther1))
-        courses.add(Course(courseName2, courseAuther2))
+        courses.add(Course(courseName))
+        courses.add(Course(courseName1))
+        courses.add(Course(courseName2))
         courseAdapter.notifyDataSetChanged()
 
     }

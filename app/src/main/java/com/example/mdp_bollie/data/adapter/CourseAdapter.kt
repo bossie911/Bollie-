@@ -1,14 +1,27 @@
 package com.example.mdp_bollie.data.adapter
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mdp_bollie.R
 import com.example.mdp_bollie.data.model.Course
 import com.example.mdp_bollie.databinding.ItemCourseBinding
+import com.example.mdp_bollie.ui.course.CourseHubFragment
 
 class CourseAdapter(private val courses: List<Course>) : RecyclerView.Adapter<CourseAdapter.ViewHolder>() {
+
+
+    private var navController: NavController? = null
+
+    fun setNavController(_navController: NavController){
+        navController = _navController
+    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -17,7 +30,11 @@ class CourseAdapter(private val courses: List<Course>) : RecyclerView.Adapter<Co
         fun databind(course: Course) {
             //binding.ivImage.setImageResource(R.drawable.)
             binding.tvCourseName.text = course.courseName
-            binding.tvCourseAuthor.text = course.courseAuthor
+            //binding.tvCourseAuthor.text = course.courseAuthor
+            binding.courseButton.setOnClickListener {
+                navController!!.navigate(R.id.action_navigation_course_to_coursePdfFragment)
+            }
+
         }
     }
 
@@ -26,6 +43,7 @@ class CourseAdapter(private val courses: List<Course>) : RecyclerView.Adapter<Co
             LayoutInflater.from(parent.context).inflate(R.layout.item_course, parent, false)
         )
     }
+
 
     override fun getItemCount(): Int {
         return courses.size
@@ -38,4 +56,6 @@ class CourseAdapter(private val courses: List<Course>) : RecyclerView.Adapter<Co
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.databind(courses[position])
     }
+
+
 }
