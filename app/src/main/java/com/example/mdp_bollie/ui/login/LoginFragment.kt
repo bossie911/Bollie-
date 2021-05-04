@@ -73,6 +73,7 @@ class LoginFragment : Fragment() {
                         task ->
                     if (task.isSuccessful) {
                         Toast.makeText(requireContext(), getString(R.string.successful_login), Toast.LENGTH_LONG).show()
+                        val user = auth.currentUser
                         findNavController().navigate(R.id.action_loginFragment_to_navigation_home)
                     }
                     //if task was not successful, print error message

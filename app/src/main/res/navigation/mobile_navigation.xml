@@ -104,6 +104,9 @@
         <action
             android:id="@+id/action_welcomeFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"

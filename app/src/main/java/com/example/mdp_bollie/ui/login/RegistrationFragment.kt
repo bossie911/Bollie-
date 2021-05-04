@@ -71,6 +71,7 @@ class RegistrationFragment : Fragment() {
                     task ->
                     if (task.isSuccessful) {
                         Toast.makeText(requireContext(), getString(R.string.successful_reg), Toast.LENGTH_LONG).show()
+                        val user = auth.currentUser
                         findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
                     }
                     //if task was not successful, print error message
