@@ -12,10 +12,15 @@ import androidx.navigation.fragment.findNavController
 import com.example.mdp_bollie.R
 import com.example.mdp_bollie.databinding.FragmentRegistrationBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class RegistrationFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var database: FirebaseDatabase
+    private lateinit var referance: DatabaseReference
+
     private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = _binding!!
 
@@ -33,6 +38,10 @@ class RegistrationFragment : Fragment() {
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
+        // Initialize Firebase Real Time Database
+        database = FirebaseDatabase.getInstance()
+        // Choose the referance where the data will be stored
+        referance = database.getReference("users")
 
         view.findViewById<Button>(R.id.btn_reg).setOnClickListener {
             authUser()
@@ -44,6 +53,11 @@ class RegistrationFragment : Fragment() {
     }
 
     private fun authUser() {
+        var firstName = binding.etFirstName.text.toString()
+        var lastName = binding.etLastName.text.toString()
+        var userName = binding.etUserName.text.toString()
+        var companyName = binding.etComName.text.toString()
+
         //Check on user input
         when {
             //check if email field is empty
@@ -58,6 +72,31 @@ class RegistrationFragment : Fragment() {
             }) -> {
                 Toast.makeText(requireContext(), getString(R.string.enter_password), Toast.LENGTH_LONG).show()
             }
+            //check if FirstName field is empty
+            TextUtils.isEmpty(firstName.trim {
+                it <= ' '
+            }) -> {
+                Toast.makeText(requireContext(), getString(R.string.enter_data), Toast.LENGTH_LONG).show()
+            }
+            //check if LastName field is empty
+            TextUtils.isEmpty(lastName.trim {
+                it <= ' '
+            }) -> {
+                Toast.makeText(requireContext(), getString(R.string.enter_data), Toast.LENGTH_LONG).show()
+            }
+            //check if UserName field is empty
+            TextUtils.isEmpty(userName.trim {
+                it <= ' '
+            }) -> {
+                Toast.makeText(requireContext(), getString(R.string.enter_data), Toast.LENGTH_LONG).show()
+            }
+            //check if CompanyName field is empty
+            TextUtils.isEmpty(companyName.trim {
+                it <= ' '
+            }) -> {
+                Toast.makeText(requireContext(), getString(R.string.enter_data), Toast.LENGTH_LONG).show()
+            }
+
             //Get rid of spaces in user input
             else -> {
                 val email: String = binding.regEmail.text.toString().trim {
@@ -71,7 +110,13 @@ class RegistrationFragment : Fragment() {
                     task ->
                     if (task.isSuccessful) {
                         Toast.makeText(requireContext(), getString(R.string.successful_reg), Toast.LENGTH_LONG).show()
-                        val user = auth.currentUser
+
+                        var model = User(firstName, lastName, userName, companyName, email)
+                        //Generate unique id for each user
+                        val id = referance.push().key
+                        //Save data to database and organize it on id
+                        referance.child(id!!).setValue(model)
+
                         findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
                     }
                     //if task was not successful, print error message

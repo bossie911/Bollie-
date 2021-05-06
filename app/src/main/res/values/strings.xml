@@ -6,7 +6,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     //Custom strings
+    <string name="logoImage">Logo Image</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_uitleg">De beste plek om te leren hoe je effectief op bol.com kunt verkopen!</string>
     <string name="open_bestellingen_txt">Aantal open bestellingen</string>
     <string name="open_retouren_text">Open retouren</string>
     <string name="klantvragen_txt">Klantvragen</string>
@@ -56,15 +58,22 @@
     <string name="uitgelogd">U bent uitgelogd</string>
     <string name="AanmeldenOpLogin">Of meld je gratis aan</string>
     <string name="wachtwoord_vergeten">Wachtwoord vergeten?</string>
+    <string name="voornaam_hint">Voornaam</string>
+    <string name="achternaam_hint">Achternaam</string>
+    <string name="gebruikersnaam_hint">Gebruikersnaam</string>
+    <string name="geboortedatum_hint">Geboortedatum</string>
+    <string name="bedrijfsnaam_hint">Bedrijf</string>
     <string name="email_hint">E-mail</string>
     <string name="wachtwoord_hint">Wachtwoord</string>
-    <string name="title_uitleg">De beste plek om te leren hoe je effectief op bol.com kunt verkopen!</string>
+
     <string name="aanmelden_welcome">Welkom</string>
     <string name="aanmelden_uWelcome">Meld je nu gratis aan</string>
     <string name="of_log_in">Of log in</string>
 
     <string name="enter_email">Please enter an email, this is a required field</string>
     <string name="enter_password">Please enter a password, this is a required field</string>
+    <string name="enter_data">This field is required</string>
+
     <string name="successful_reg">You have been successfully registered</string>
     <string name="successful_login">You are logged in successfully</string>
 
