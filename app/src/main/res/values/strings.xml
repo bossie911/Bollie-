@@ -40,7 +40,6 @@
     <string name="comunity">Community</string>
     <string name="support">Support</string>
     <string name="personal_information">Personal Information</string>
-    <string name="log_out">Log Out</string>
     <string name="producten_txt">Producten</string>
     <string name="bestellingen_txt">Bestellingen</string>
     <string name="hoofdstuk1">Hoofdstuk 1</string>
@@ -53,6 +52,8 @@
     <string name="login_welcome">Welkom terug!</string>
     <string name="login_uWelcome">Login met je bollie account!</string>
     <string name="btn_login">Inloggen</string>
+    <string name="btn_logout">Uitloggen</string>
+    <string name="uitgelogd">U bent uitgelogd</string>
     <string name="AanmeldenOpLogin">Of meld je gratis aan</string>
     <string name="wachtwoord_vergeten">Wachtwoord vergeten?</string>
     <string name="email_hint">E-mail</string>

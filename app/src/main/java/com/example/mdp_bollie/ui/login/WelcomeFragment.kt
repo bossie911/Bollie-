@@ -43,14 +43,17 @@ class WelcomeFragment : Fragment() {
         }
     }
 
+    //Check if user loggedIn, then redirect to home page, otherwise navigate to welcome page.
     override fun onStart() {
         val user = auth.currentUser
         super.onStart()
 
+        //If not loggedIn, print not logged in and navigate to welcome page
         if (user == null) {
             Log.d("main", " not logged in ")
         }
 
+        //If logged in, redirect to home page
         if (user != null) {
             Log.d("main", " logged in ")
             findNavController().navigate(R.id.action_welcomeFragment_to_navigation_home)
